@@ -1,0 +1,25 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "Curso de JS com TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersonbj/js-tdd.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library",
+    "curso"
+  ],
+  "author": "Jefferson B. de Jesus <jeffersonbj@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffersonbj/js-tdd/issues"
+  },
+  "homepage": "https://github.com/jeffersonbj/js-tdd#readme"
+}
