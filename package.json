@@ -4,22 +4,28 @@
   "description": "Curso de JS com TDD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepush": "npm run lint",
+    "lint": "eslint **/*.{js,jsx} --quiet",
+    "format": "prettier --write **/*.{js,jsx}"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeffersonbj/js-tdd.git"
   },
-  "keywords": [
-    "js",
-    "tdd",
-    "library",
-    "curso"
-  ],
+  "keywords": ["js", "tdd", "library", "curso"],
   "author": "Jefferson B. de Jesus <jeffersonbj@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jeffersonbj/js-tdd/issues"
   },
-  "homepage": "https://github.com/jeffersonbj/js-tdd#readme"
+  "homepage": "https://github.com/jeffersonbj/js-tdd#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "husky": "^0.14.3",
+    "prettier": "^1.11.1",
+    "prettier-eslint": "^8.8.1"
+  }
 }
