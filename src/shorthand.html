@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shorthand Properties</title>
+</head>
+
+<body>  
+</body>
+
+<script>
+  let firstName = 'William';
+  let surName = 'Justen';
+  let age = 26;
+
+  //se as variáveis possuirem o mesmo nome das propiedade, pode ocultar a atribuição
+  const person = {
+    firstName: firstName,
+    surName: surName,
+    age: age
+  };
+
+  const person1 = {
+    firstName,
+    surName,
+    age,
+
+    //posso omitir o function
+    hello(){
+      console.log('HELLO!');
+    }
+  };
+
+  console.log(person1);
+  console.log(person1.hello());
+</script>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>02 This no Arrow Function</title>
+</head>
+
+<body>
+  <button id="btn">Click Me</button>
+</body>
+
+<script>
+
+  //O arrow function não olha o contexto do botão mas todo o window object
+  const btn = document.getElementById("btn");
+  btn.addEventListener('click', function () {
+    console.log(this);
+  })
+</script>
+
+</html>

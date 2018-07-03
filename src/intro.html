@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>01 Intro Arrow Function</title>
+</head>
+
+<body>
+  <script>
+    const ireland = ['Dublin', 'Galway', 'Cork'];
+
+    const names = ireland.map(function (name) {
+      return `Cidade ${name}!`;
+    });
+
+    const namesArrow = ireland.map((name) => {
+      return `Cidade ${name}!`;
+    });
+
+    //Um parametro, não precisa de parenteses
+    const namesArrowSingle = ireland.map(name => {
+      return `Cidade ${name}!`;
+    });
+
+    //Uma linha, não precisa de retorno
+    const namesArrowOneLine = ireland.map(name => `Cidade ${name}!`);
+
+    const namesChain = ireland
+      .filter(name => name === 'Dublin')
+      .map(name => `Cidade ${name}!`);
+
+    console.log(names);
+    console.log(namesArrow);
+    console.log(namesArrowSingle);
+    console.log(namesArrowOneLine);
+    console.log(namesChain);
+
+  </script>
+</body>
+
+</html>
