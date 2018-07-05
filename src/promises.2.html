@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Promises Múltiplas</title>
+</head>
+<body>
+</body>
+<script>
+  //Status da Promise:
+  //  pending, resolved, rejected
+  const currency = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({
+        currency: 'euro',
+        value: 4.50
+      })
+    }, 2000);
+  })
+
+  const countries = new Promise((resolve, reject) => {
+    resolve(
+      ['Ireland', 'England', 'China']
+    );
+  })
+
+  //Método all: Espera o término de todas as promises
+  Promise
+    .all([currency, countries])
+    .then(responses => {
+      console.log(responses);
+    })
+
+  //Método race: A primeira promise que retornar já encerra e não aguarda o término das outras
+  Promise
+    .race([currency, countries])
+    .then(responses => {
+      console.log(responses);
+    })
+
+</script>
+
+</html>

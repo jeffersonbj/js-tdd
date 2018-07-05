@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Rest Params</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  //elimino a necessidade de passar arg1, arg2, arg3...
+  function multiply(mult, ...args) {
+    return args.map(arg => arg * mult);
+  }
+  //passando quantos parâmetros forem necessários
+  console.log(multiply(2, 1, 2, 3, 4));
+
+</script>
+
+</html>

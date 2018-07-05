@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Promises exemplo</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  //Status da Promise:
+  //  pending
+  //  resolved
+  //  rejected
+  var posts = fetch('https://willianjusten.com.br/search.json');
+
+  posts
+    .then(data => data.json())
+    .then(data => data.map(post => {
+      console.log(post.title);
+    }))
+  //.then(data => console.log(data));
+
+</script>
+
+</html>

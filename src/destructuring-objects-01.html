@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  
+</body>
+<script>
+  var data = {
+    name : 'Jeff',
+    surname : 'Jesus',
+    age : 25,
+    blog: 'site.com',
+    social: {
+      twitter: '@jeffersonbj',
+      facebook: '/jefferson_jesus'
+    }
+  }
+
+  const {name, surname} = data;
+  console.log(name);
+  console.log(surname);
+
+  const {facebook, twitter} = data.social;
+  console.log(facebook);
+  console.log(twitter);
+  
+  //Alterando o nome de uma variável
+  //não se chama mais 'facebook' e sim 'fb'
+  const {facebook: fb} = data.social
+  console.log(fb);
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Promises</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  //Trabalho com dados assíncronos (Ajax, por exemplo)
+  //resolve = metodo que irám resolver a ação
+  //reject = método que irá rejeitar
+  var defer = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (true) {
+        resolve('Funfa!');
+      } else {
+        reject('Deu xabú!');
+      }
+    }, 2000);
+  });
+
+  //then, quando finalizar a ação, realize 'X' tarefa
+  //catch, recebe um erro, funciona para tratarmos erros
+  defer
+    .then((data) => {
+      console.log(data);
+      return 'return para o segundo \"then\" tratar';
+    })
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+
+</script>
+
+</html>
